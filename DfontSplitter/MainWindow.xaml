@@ -7,6 +7,46 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <!--spacer-->
+            <RowDefinition Height="auto" />
+            <!-- title-->
+            <RowDefinition Height="20" />
+            <RowDefinition Height="auto" />
+            <!-- src fonts-->
+            <RowDefinition Height="auto" />
+            <!-- src fonts group-->
+            <RowDefinition Height="auto" />
+            <!-- add remove buttons-->
+            <RowDefinition Height="20" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" Text="DfontSplitter allows you to convert macOS format font files into TrueType (.ttf) files." />
+
+        <TextBlock Grid.Column="1" Grid.Row="3" Text="Source Fonts" />
+        <ListBox Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="4" Height="200" />
+
+        <Button Grid.Row="5" Grid.Column="1" Content="Add Files..." Name="AddFilesButton" />
+        <Button Grid.Row="5" Grid.Column="2" Content="Remove" Name="RemoveFilesButton" />
+
+        <TextBlock Grid.Column="1" Grid.Row="7" Text="Destination Folder" />
+        <TextBox Grid.Row="8" Grid.Column="1" Width="200" />
+        <Button Grid.Row="8" Grid.Column="2" Content="Browse" Name="DestinationBrowseButton" />
+
+        <Button Grid.Row="10" Grid.Column="1" Content="Convert" Name="ConvertButton" />
+        <Button Grid.Row="10" Grid.Column="4" Content="Options" Name="OptionsButton" />
 
     </Grid>
 </Window>
